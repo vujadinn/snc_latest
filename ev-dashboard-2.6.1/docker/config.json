@@ -1,0 +1,44 @@
+{
+  "CentralSystemServer": {
+    "protocol": "http",
+    "host": "localhost",
+    "port": 81,
+		"pollIntervalSecs": 10
+  },
+  "Authorization": {
+    "debug": false
+  },
+  "Asset": {
+    "maxImageKb": 800
+  },
+  "User": {
+    "maxPictureKb": 150,
+    "captchaSiteKey": "6LfzXSIUAAAAADTMDaUDMJ8-zYmLSmr8BeIZcK7t"
+  },
+  "Car": {
+    "url": "https://ev-database.org/"
+  },
+  "Tenant": {
+    "maxLogoKb": 150
+  },
+  "Company": {
+    "maxLogoKb": 100
+  },
+  "Site": {
+    "maxPictureKb": 800
+  },
+  "SiteArea": {
+    "maxPictureKb": 800
+  },
+  "VehicleManufacturer": {
+    "maxLogoKb": 100
+  },
+  "Vehicle": {
+    "maxPictureKb": 250
+  },
+  
+  "Advanced": {
+    "debounceTimeNotifMillis": 50,
+    "debounceTimeSearchMillis": 500
+  }
+}

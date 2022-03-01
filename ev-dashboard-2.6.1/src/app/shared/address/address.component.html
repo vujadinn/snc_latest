@@ -1,0 +1,97 @@
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group">
+      <mat-form-field>
+        <input matInput ngx-google-places-autocomplete #placesRef="ngx-places" (onAddressChange)="setAddress($event)"
+          placeholder="{{'general.address1' | translate}}" type="text" [formControl]="address1">
+          <mat-error *ngIf="address1.errors?.required">
+            {{"general.mandatory_field" | translate}}
+          </mat-error>
+        </mat-form-field>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="form-group">
+      <mat-form-field>
+        <input matInput placeholder="{{'general.address2' | translate}}" type="text" [formControl]="address2">
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="form-group">
+      <mat-form-field>
+        <input matInput placeholder="{{'general.postal_code' | translate}}" type="text" [formControl]="postalCode">
+        <mat-error *ngIf="postalCode.errors?.required">
+          {{"general.mandatory_field" | translate}}
+        </mat-error>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="form-group">
+      <mat-form-field>
+        <input matInput placeholder="{{'general.city' | translate}}" type="text" [formControl]="city">
+        <mat-error *ngIf="city.errors?.required">
+          {{"general.mandatory_field" | translate}}
+        </mat-error>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="form-group">
+      <mat-form-field>
+        <input matInput placeholder="{{'general.department' | translate}}" type="text" [formControl]="department">
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="form-group">
+      <mat-form-field>
+        <input matInput placeholder="{{'general.region' | translate}}" type="text" [formControl]="region">
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="form-group">
+      <mat-form-field>
+        <input matInput placeholder="{{'general.country' | translate}}" type="text" [formControl]="country">
+        <mat-error *ngIf="country.errors?.required">
+          {{"general.mandatory_field" | translate}}
+        </mat-error>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="col-md-3" *ngIf="!hideGeolocation">
+    <div class="form-group" >
+      <mat-form-field>
+        <input matInput placeholder="{{'general.latitude' | translate}}" type="text" [formControl]="latitude" >
+        <mat-error>{{"general.invalid_value" | translate}}</mat-error>
+        <mat-error *ngIf="latitude.errors?.required">
+          {{"general.mandatory_field" | translate}}
+        </mat-error>
+        <button mat-button matSuffix mat-icon-button aria-label="Add" (click)="assignGeoMap()" [disabled]='onlyReadGeolocation'>
+          <mat-icon>pin_drop</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="col-md-3" *ngIf="!hideGeolocation">
+    <div class="form-group" >
+      <mat-form-field>
+        <input matInput placeholder="{{'general.longitude' | translate}}" type="text" [formControl]="longitude">
+        <mat-error>{{"general.invalid_value" | translate}}</mat-error>
+        <mat-error *ngIf="longitude.errors?.required">
+          {{"general.mandatory_field" | translate}}
+        </mat-error>
+        <button mat-button matSuffix mat-icon-button aria-label="Add" (click)="assignGeoMap()" [disabled]='onlyReadGeolocation'>
+          <mat-icon>pin_drop</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="col-md-1" class="align-self-baseline" *ngIf="!hideGeolocation">
+    <button mat-raised-button color="primary" (click)="showPlace()" [disabled]="!onlyReadGeolocation && (!coordinates.valid || !latitude.value || !longitude.value)">
+      <mat-icon>location_on</mat-icon><span>{{'general.show_place' | translate}}</span>
+    </button>
+  </div>
+</div>

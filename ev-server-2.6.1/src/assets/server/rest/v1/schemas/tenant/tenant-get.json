@@ -1,0 +1,16 @@
+{
+  "$id": "tenant-get",
+  "title": "Get one Tenant",
+  "type": "object",
+  "properties": {
+    "ID": {
+      "$ref": "tenant#/properties/id"
+    },
+    "ProjectFields": {
+      "$ref": "common#/definitions/projectFields"
+    }
+  },
+  "required": [
+    "ID"
+  ]
+}

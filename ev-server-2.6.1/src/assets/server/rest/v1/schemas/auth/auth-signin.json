@@ -1,0 +1,25 @@
+{
+  "$id": "auth-signin",
+  "title": "Sign in",
+  "type": "object",
+  "properties": {
+    "email": {
+      "$ref": "user#/definitions/email"
+    },
+    "password": {
+      "type": "string",
+      "sanitize": "mongo"
+    },
+    "acceptEula": {
+      "$ref": "common#/definitions/acceptEula"
+    },
+    "tenant": {
+      "$ref": "common#/definitions/authSubdomain"
+    }
+  },
+  "required": [
+    "email",
+    "password",
+    "acceptEula"
+  ]
+}

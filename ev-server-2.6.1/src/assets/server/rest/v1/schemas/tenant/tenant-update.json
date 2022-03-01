@@ -1,0 +1,34 @@
+{
+  "$id": "tenant-update",
+  "title": "Update one Tenant",
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "tenant#/properties/id"
+    },
+    "name": {
+      "$ref": "tenant#/properties/name"
+    },
+    "email": {
+      "$ref": "user#/definitions/email"
+    },
+    "subdomain": {
+      "$ref": "common#/definitions/subdomain"
+    },
+    "logo": {
+      "$ref": "common#/definitions/logo"
+    },
+    "address": {
+      "$ref": "common#/definitions/address"
+    },
+    "components": {
+      "$ref": "tenant-components#/definitions/components"
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "email",
+    "subdomain"
+  ]
+}

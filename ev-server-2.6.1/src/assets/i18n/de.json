@@ -1,0 +1,187 @@
+{
+  "billing": {
+    "generatedUser": "Erstellter Benutzer für '{{email}}'",
+    "chargingAtSiteArea": "Charging session: {{sessionID}} - Start Date: {{startDate}} at {startTime} - Energy Consumption: {{totalConsumption}} kWh at {{siteAreaName}}",
+    "chargingAtChargeBox": "Charging session: {{sessionID}} - Start Date: {{startDate}} at {{startTime}} - Energy Consumption: {{totalConsumption}} kWh at charging station {{chargeBoxID}}",
+    "header-itemDescription": "Session: {{sessionID}} - Start Date: {{startDate}} at {{startTime}} at charging station {{chargeBoxID}}",
+    "flatFee-shortItemDescription": "Flat Fee",
+    "energy-shortItemDescription": "Energy Consumption: {{quantity}} kWh",
+    "chargingTime-shortItemDescription": "Charging Time: {{duration}}",
+    "parkingTime-shortItemDescription": "Parking Time: {{duration}}"
+  },
+  "chargers": {
+    "chargeBoxSN": "Seriennummer Ladestation",
+    "chargePointSN": "Seriennummer Ladepunkt",
+    "chargingStation": "Ladestation",
+    "connector": "Anschluss",
+    "firmwareVersion": "Firmware-Version",
+    "lastReboot": "Letzter Neustart",
+    "lastSeen": "Letzte Vebindung",
+    "maxPower": "Maximale Leistung (Watt)",
+    "model": "Model",
+    "numberOfConnectors": "Anzahl der Anschlüsse",
+    "ocppProtocol": "OCPP-Protokoll",
+    "ocppVersion": "OCPP-Version",
+    "powerLimitUnit": "Leistungseinheit des Limits",
+    "timezone": "Zeitzone der Ladestation",
+    "vendor": "Hersteller"
+  },
+  "general": {
+    "changedBy": "Geändert von",
+    "changedOn": "Geändert am",
+    "createdOn": "Erstellt am",
+    "date": "Datum",
+    "endDate": "Enddatum",
+    "endTime": "Endzeit",
+    "invalidDate": "Ungültiges Datum",
+    "invalidTime": "Ungültige Zeit",
+    "latitude": "Breitengrad",
+    "longitude": "Längengrad",
+    "month": "Monat",
+    "name": "Name",
+    "price": "Preis",
+    "priceUnit": "Preiseinheit",
+    "site": "Standort",
+    "siteArea": "Standortbereich",
+    "startDate": "Startdatum",
+    "startTime": "Startzeit",
+    "time": "Zeit",
+    "value": "Wert",
+    "year": "Jahr"
+  },
+  "loggings": {
+    "action": "Aktion",
+    "host": "Host",
+    "level": "Level",
+    "message": "Nachricht",
+    "method": "Methode",
+    "module": "Modul",
+    "process": "Prozess",
+    "source": "Ursprung",
+    "type": "Typ"
+  },
+  "notifications": {
+    "sessionNotStarted": {
+      "title": "Der Ladevorgang wurde nicht gestartet",
+      "body": "Sie haben sich an der Ladestation '{{chargeBoxID}}' authentifiziert, aber es konnte kein Ladevorgang gestartet werden"
+    },
+    "sessionStarted": {
+      "title": "Ladevorgang gestartet",
+      "body": "Ihr Ladevorgang an der Ladestation '{{chargeBoxID}}', Ladepunkt '{{connectorId}}' wurde erfolgreich gestartet. Organsation: '{{tenantName}}'"
+    },
+    "ocpiPatchChargingStationsStatusesError": {
+      "title": "Sende Roaming Status",
+      "body": "Der Status der Ladestation konnte nicht zur Roaming-Plattform übermittelt werden. Ort: '{{location}}' Organisation: '{{tenantName}}', überprüfen Sie die Logs"
+    },
+    "oicpPatchChargingStationsStatusesError": {
+      "title": "Senden des Roaming Status",
+      "body": "Der Status der Ladestationen konnte nicht zur Hubject Roaming-Plattform übermittelt werden. Organisation: '{{tenantName}}', überprüfen Sie die Logs"
+    },
+    "oicpPatchChargingStationsError": {
+      "title": "Senden der Hubject EVSE Daten",
+      "body": "Die EVSE Daten der Ladestationen konnte nicht zur Hubject Roaming-Plattform übermittelt werden. Organisation: '{{tenantName}}', überprüfen Sie die Logs"
+    },
+    "optimalChargeReached": {
+      "title": "Optimale Ladung erreicht",
+      "body": "Ihr Elektroauto, verbunden mit Ladestation '{{chargeBoxID}}', Ladepunkt '{{connectorId}}', hat die optimale Ladung (85%) erreicht. Organisation: '{{tenantName}}'"
+    },
+    "endOfCharge": {
+      "title": "Laden abgeschlossen",
+      "body": "Ihr Elektroauto, verbunden mit Ladestation '{{chargeBoxID}}', Ladepunkt '{{connectorId}}', hat gerade das Laden abgeschlossen. Organisation: '{{tenantName}}'"
+    },
+    "endOfSession": {
+      "title": "Ladevorgang abgeschlossen",
+      "body": "Ihr Ladevorgang an der Ladestation '{{chargeBoxID}}', Ladepunkt '{{connectorId}}' wurde gerade abgeschlossen. Organisation: '{{tenantName}}'"
+    },
+    "chargingStationStatusError": {
+      "title": "Fehler an Ladestation",
+      "body": "Fehler aufgetreten an Ladestation '{{chargeBoxID}}', Ladepunkt '{{connectorId}}'. Organisation: '{{tenantName}}': {{error}}"
+    },
+    "unknownUserBadged": {
+      "title": "Unbekannter Benutzer",
+      "body": "Ein unbekannter Benutzer hat sich an Ladestation '{{chargeBoxID}}' mit der ID '{{badgeID}}' authentifiziert. Organisation: '{{tenantName}}'"
+    },
+    "chargingStationRegistered": {
+      "title": "Ladestation verbunden",
+      "body": "Die Ladestation '{{chargeBoxID}}' wurde gerade mit dem zentralen Server verbunden. Organisation: '{{tenantName}}'"
+    },
+    "userAccountStatusChanged": {
+      "title": "Konto {{status}}",
+      "activated": "aktiviert",
+      "suspended": "deaktiviert",
+      "body": "Ihr Konto wurde von einem Administrator {{status}}. Organisation: '{{tenantName}}'"
+    },
+    "userAccountInactivity": {
+      "title": "Benutzerkonto",
+      "body": "Ihr Benutzerkonto ist inaktiv seit {{lastLogin}}. Organisation: '{{tenantName}}'. Bitte nehmen Sie zur Kenntnis, dass aus Compliance Gründen Benutzerkonten nach 6 monatiger Inaktivität gelöscht werden."
+    },
+    "preparingSessionNotStarted": {
+      "title": "Ladevorgang nicht gestartet",
+      "body": "Der Ladevorgang an Ladestation '{{chargeBoxID}}', Ladepunkt '{{connectorId}}' wurde nicht gestartet. Organisation: '{{tenantName}}'"
+    },
+    "offlineChargingStation": {
+      "title": "Ladestation offline",
+      "body": "Folgende Ladestationen sind offline. Organisation: '{{tenantName}}': {{chargeBoxIDs}}"
+    },
+    "billingUserSynchronizationFailed": {
+      "title": "Benutzersynchronisierung fehlgeschlagen",
+      "body": "Die Synchronisierung von {{nbrUsersInError}} Nutzer(n)  mit dem Bezahldienstleister ist fehlgeschlagen. Organisation: '{{tenantName}}'"
+    },
+    "billingInvoiceSynchronizationFailed": {
+      "title": "Rechnungssynchronisierung fehlgeschlagen",
+      "body": "Die Synchronisierung von {{nbrInvoicesInError}} Rechnung(en) mit dem Abrechnungsdienstleister ist fehlgeschlagen. Organisation: '{{tenantName}}'"
+    },
+    "billingPeriodicOperationFailed": {
+      "title": "Periodic Billing Operations",
+      "body": "Failed to process {{nbrInvoicesInError}} invoice(s). Organization '{{tenantName}}'"
+    },
+    "computeAndApplyChargingProfilesFailed": {
+      "title": "Charging Profiles fehlgeschlagen",
+      "body": "Es war nicht möglich die Ladeprofile für '{{chargeBoxID}}' auf dem Standortbereich '{{siteAreaName}}' in der Organisation '{{tenantName}}' anzuwenden"
+    },
+    "billingNewInvoicePaid": {
+      "title": "Neue beglichene Rechnung",
+      "body": "Ihre Rechnung ({{invoiceNumber}}) in Höhe von {{amount}} wurde beglichen und ist nun verfügbar"
+    },
+    "billingNewInvoiceOpen": {
+      "title": "Neue offene Rechnung",
+      "body": "Eine neue Rechnung ({{invoiceNumber}}) in Höhe von {{amount}} ist jetzt verfügbar. Bitte prüfen Sie die E-Mail, um die Zahlung abzuschließen"
+    },
+    "endUserErrorNotification": {
+      "title": "Ein Nutzer hat einen Fehler gemeldet",
+      "body": "'{{userName}}' hat foglenden Fehler: '{{errorTitle}}' - '{{errorDescription}}' in Organisaion '{{tenantName}}' gemeldet"
+    },
+    "accountVerificationNotification": {
+      "title": "Account verifiziert",
+      "bodyVerified": "Ihr Account wurde erfolgreich verifiziert. Ein Administrator wird Ihren Account prüfen und freischalten",
+      "bodyVerifiedAndActivated": "Ihr Account wurde erfolgreich verifiziert und aktiviert"
+    }
+  },
+  "siteArea": "Standortbereich",
+  "statistics": {
+    "consumption": "Consumption (kW.h)",
+    "inactivity": "Inaktivität (Stunden)",
+    "numberOfSessions": "Anzahl der Ladevorgänge",
+    "usage": "Nutzung (Stunden)"
+  },
+  "tags": {
+    "id": "RFID",
+    "description": "Badge Beschreibung",
+    "virtualBadge": "Virtueller Badge"
+  },
+  "transactions": {
+    "totalConsumption": "Gesamtverbrauch (kW.h)",
+    "totalDuration": "Gesamtdauer (Mins)",
+    "totalInactivity": "Gesamtinaktivität (Mins)"
+  },
+  "users": {
+    "email": "Email",
+    "eulaAcceptedOn": "EULA akzeptiert am",
+    "firstName": "Vorname",
+    "id": "ID",
+    "role": "Rolle",
+    "status": "Status",
+    "user": "Nutzer",
+    "userID": "Nutzer ID"
+  }
+}

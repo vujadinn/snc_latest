@@ -1,0 +1,20 @@
+<div class="main-content flex-grow-1">
+  <mat-tab-group (selectedIndexChange)="updateRoute($event)" [selectedIndex]="activeTabIndex" animationDuration="0ms" disableRipple="true" class="h-100 mat-tab-info">
+    <mat-tab *ngIf="canListAssets">
+      <ng-template mat-tab-label>
+        <mat-icon>account_balance</mat-icon><span>{{'asset.tabs.assets' | translate}}</span>
+      </ng-template>
+      <ng-template matTabContent>
+        <app-assets-list></app-assets-list>
+      </ng-template>
+    </mat-tab>
+    <mat-tab *ngIf="canListAssetsInError">
+      <ng-template mat-tab-label>
+        <mat-icon>warning</mat-icon><span>{{'asset.tabs.in_error' | translate}}</span>
+      </ng-template>
+      <ng-template matTabContent>
+        <app-assets-in-error></app-assets-in-error>
+      </ng-template>
+    </mat-tab>
+  </mat-tab-group>
+</div>
